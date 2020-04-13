@@ -55,7 +55,10 @@ const style = {
   itemContainer: {
     display:'flex',
     flexWrap:'wrap',
-    justifyContent:'space-around'
+    justifyContent:'space-around',
+    marginTop:'2%',
+    minHeight:'500px',
+    maxHeight:'500px'
   },
   addButton:{
     border:'none',
@@ -65,12 +68,12 @@ const style = {
     fontSize:'1vw',
     padding:'1%',
     marginRight:'3%',
-    outline:'none'
+    outline:'none',
+    fontFamily: "'Gotu', sans-serif"
   },
   item:{
     width:'30%',
-    textAlign:'center',
-    border:'1px solid lightgrey'
-  }
+    marginTop:'1%',
+  },
 }
 

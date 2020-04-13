@@ -11,7 +11,7 @@ function App() {
 }
 const style = {
   window: {
-    margin: '0px'
+    margin: '0px',
   },
 }
 
