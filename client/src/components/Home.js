@@ -28,7 +28,7 @@ class Home extends React.Component {
         {showForm ? <ItemForm /> : <></>}
         <div style={style.itemContainer}>
           {items.map(item=>
-          <div style={style.item}>
+          <div key={`item=${item.id}`}style={style.item}>
             <Item item={item} />
             </div>
             )}
