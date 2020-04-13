@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import ItemForm from './ItemForm'
+import Item from './Item'
 
 class Home extends React.Component {
   state = { items: [], showForm: false }
@@ -26,7 +27,11 @@ class Home extends React.Component {
         </div>
         {showForm ? <ItemForm /> : <></>}
         <div style={style.itemContainer}>
-
+          {items.map(item=>
+          <div style={style.item}>
+            <Item item={item} />
+            </div>
+            )}
         </div>
       </div>
     )
@@ -48,8 +53,9 @@ const style = {
     margin:'0px',
   },
   itemContainer: {
-    display: 'flex',
-    justifyContent: 'space-around'
+    display:'flex',
+    flexWrap:'wrap',
+    justifyContent:'space-around'
   },
   addButton:{
     border:'none',
@@ -60,6 +66,11 @@ const style = {
     padding:'1%',
     marginRight:'3%',
     outline:'none'
+  },
+  item:{
+    width:'30%',
+    textAlign:'center',
+    border:'1px solid lightgrey'
   }
 }
 
