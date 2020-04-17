@@ -1,0 +1,15 @@
+development:
+  cloud_name: <%= ENV['dpo2wzfn1'] %>
+  api_key: <%= ENV['379988945232538'] %>
+  api_secret: <%= ENV['dY3lwLspBwRI-Y9MR3nAVNL3Jus'] %>
+ 
+production:
+  cloud_name: <%= ENV['dpo2wzfn1'] %>
+  api_key: <%= ENV['379988945232538'] %>
+  api_secret: <%= ENV['dY3lwLspBwRI-Y9MR3nAVNL3Jus'] %>
+test:
+  cloud_name: <%= ENV['dpo2wzfn1'] %>
+  api_key: <%= ENV['379988945232538'] %>
+  api_secret: <%= ENV['dY3lwLspBwRI-Y9MR3nAVNL3Jus'] %>
+
+  

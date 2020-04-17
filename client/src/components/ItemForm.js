@@ -5,12 +5,16 @@ import axios from 'axios'
 class ItemForm extends React.Component {
 
   handleSubmit = () => {
+    let file = document.getElementById('file').value
     let item = {
       name: document.getElementById('name').value,
-      image: "https://picsum.photos/100",
       description: document.getElementById('description').value,
       likes: 0
     }
+    if(file === ''){
+      item = {...item, image: ""}
+    }
+    else{item = {...item, file:file}}
     axios.post('/api/items', item)
       .catch(e => console.log(e))
   }
@@ -30,12 +34,12 @@ class ItemForm extends React.Component {
 
             <div>
               <label htmlFor='image'>Image</label>
-              <input type='file' name='image' style={style.file} />
+              <input type='file' name='image' id='file' style={style.file} />
             </div>
           </div>
           <div>
             <label htmlFor='Descriptions'>Description</label>
-            <textarea type='text' rows='4' cols='40' id='description' onChange={this.handleChange} style={style.input} />
+            <textarea type='text' rows='4' cols='40' id='description' style={style.input} />
           </div>
 
           <div style={style.buttonHolder}>
