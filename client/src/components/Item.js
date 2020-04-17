@@ -6,13 +6,14 @@ const Item = ({ item }) => {
     <div style={style.itemContainer}>
       <div style={style.imageContainer}>
         <div style={style.crop}>
-          <img src={item.image} alt='itemImage'/>
+          <img src={item.image} alt='itemImage' />
         </div>
       </div>
       <div style={style.informationContainer}>
         <h3 style={style.text}>{item.name}</h3>
         <h5 style={style.text}>Description</h5>
         <h6 style={style.text}>{item.description}</h6>
+        <h6>Likes: {item.likes}</h6>
       </div>
 
     </div>
@@ -33,7 +34,7 @@ const style = {
     background: '#fff',
     display: 'inline-block',
     verticalAlign: 'top',
-    width: '100%',
+    width: '30%',
     marginRight: '.5em',
     marginBottom: '.3em',
     borderRadius: '5px',
@@ -56,12 +57,13 @@ const style = {
     overflow: 'hidden',
     position: 'relative',
   },
-  text:{
-    margin:'0px'
+  text: {
+    margin: '0px'
   },
-  // informationContainer:{
-  //   overflow:'scroll'
-  // }
+  informationContainer: {
+
+    width: '70%'
+  }
 }
 
 export default Item
