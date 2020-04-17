@@ -55,7 +55,6 @@ const style = {
   itemContainer: {
     display:'flex',
     flexWrap:'wrap',
-    justifyContent:'space-around',
     marginTop:'2%',
     minHeight:'500px',
     maxHeight:'500px'
@@ -72,8 +71,9 @@ const style = {
     fontFamily: "'Gotu', sans-serif"
   },
   item:{
-    width:'30%',
+    width:'20%',
     marginTop:'1%',
+    margin:'2%',
   },
 }
 

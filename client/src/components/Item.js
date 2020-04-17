@@ -4,11 +4,9 @@ import React from 'react'
 const Item = ({ item }) => {
   return (
     <div style={style.itemContainer}>
-      <div style={style.imageContainer}>
-        <div style={style.crop}>
-          <img src={item.image} alt='itemImage' />
-        </div>
-      </div>
+
+      <img src={item.image} alt='itemImage' />
+
       <div style={style.informationContainer}>
         <h3 style={style.text}>{item.name}</h3>
         <h5 style={style.text}>Description</h5>
@@ -25,6 +23,7 @@ const style = {
     marginTop: '1%',
     display: 'flex',
     justifyContent: 'space-between',
+    flexDirection: 'column',
     backgroundColor: 'white',
     boxShadow: '0px 1px 5px #bfbfbf',
     borderRadius: '5px',
@@ -34,7 +33,7 @@ const style = {
     background: '#fff',
     display: 'inline-block',
     verticalAlign: 'top',
-    width: '30%',
+    width: '100%',
     marginRight: '.5em',
     marginBottom: '.3em',
     borderRadius: '5px',
@@ -44,13 +43,9 @@ const style = {
   image: {
     display: 'block',
     minWidth: '100%',
-    minHeight: '100%',
     margin: ' auto',
     position: 'absolute',
-    top: '-100%',
-    right: '-100%',
-    bottom: '-100%',
-    left: '-100%',
+    objectFit:'cover'
   },
   crop: {
     height: '100%',
@@ -62,7 +57,6 @@ const style = {
   },
   informationContainer: {
 
-    width: '70%'
   }
 }
 
